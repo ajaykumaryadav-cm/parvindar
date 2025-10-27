@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parvinder Kumar | Senior Tender Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0a2463;
+            --dark-blue: #061a44;
+            --navy-blue: #1a3a8a;
+            --gold: #d4af37;
+            --light-gold: #f4e4a6;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e9ecef;
+            --dark-gray: #6c757d;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-dark: 0 15px 40px rgba(0, 0, 0, 0.2);
+            --transition: all 0.4s ease;
+            --border-radius: 15px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .section-title h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-blue), var(--gold));
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--dark-gray);
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-dark);
+        }
+
+        .btn:hover:before {
+            left: 100%;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold) 0%, #b8941f 100%);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: var(--white);
+            padding: 120px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgzMCkiPjxyZWN0IHdpZHRoPSIyIiBoZWlnaHQ9IjQiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+');
+            opacity: 0.1;
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 6px solid var(--gold);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: var(--shadow-dark);
+            background: var(--white);
+            position: relative;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-text {
+            text-align: center;
+        }
+
+        .profile-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--white) 0%, var(--light-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .profile-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .contact-btn i {
+            font-size: 1.2rem;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 15px;
+            min-width: 200px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--gold);
+        }
+
+        .stat-text {
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--medium-gray) 100%);
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: var(--white);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary-blue), var(--gold));
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            margin-bottom: 70px;
+            position: relative;
+            width: 100%;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+            padding-left: 70px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: auto;
+            padding-right: 70px;
+            text-align: right;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+            border-left: 5px solid var(--primary-blue);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            border-left: none;
+            border-right: 5px solid var(--gold);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-dark);
+        }
+
+        .timeline-content:before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: var(--gold);
+            border-radius: 50%;
+            top: 30px;
+            box-shadow: 0 0 0 5px white, 0 0 0 10px var(--gold);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content:before {
+            left: -12px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content:before {
+            right: -12px;
+        }
+
+        .timeline-content h3 {
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+            font-size: 1.5rem;
+        }
+
+        .timeline-content h4 {
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .timeline-content ul {
+            list-style-type: none;
+        }
+
+        .timeline-content li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .timeline-content li:before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content li {
+            padding-left: 0;
+            padding-right: 25px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content li:before {
+            left: auto;
+            right: 0;
+        }
+
+        /* Core Competencies Section */
+        .competencies {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--medium-gray) 100%);
+        }
+
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .competency-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .competency-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-blue), var(--gold));
+        }
+
+        .competency-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-dark);
+        }
+
+        .competency-icon {
+            font-size: 50px;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .competency-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.4rem;
+        }
+
+        /* Technical Skills Section */
+        .skills {
+            background: var(--white);
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 5px solid var(--primary-blue);
+        }
+
+        .skill-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid var(--gold);
+        }
+
+        .skill-icon {
+            font-size: 40px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill-item h3 {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+        }
+
+        /* Education Section */
+        .education {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--medium-gray) 100%);
+        }
+
+        .education-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .education-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .education-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-blue), var(--gold));
+        }
+
+        .education-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-dark);
+        }
+
+        .education-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .education-card h4 {
+            color: var(--gold);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .education-card p {
+            color: #666;
+        }
+
+        /* Languages Section */
+        .languages {
+            background: var(--white);
+        }
+
+        .languages-container {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .language-item {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            min-width: 180px;
+        }
+
+        .language-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .language-icon {
+            font-size: 50px;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .language-item h3 {
+            color: var(--primary-blue);
+        }
+
+        /* Government Departments Section */
+        .departments {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--medium-gray) 100%);
+        }
+
+        .departments-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .department-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .department-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-blue), var(--gold));
+        }
+
+        .department-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-dark);
+        }
+
+        .department-icon {
+            font-size: 40px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .department-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+        }
+
+        /* Tender Success Section */
+        .tender-success {
+            background: var(--white);
+        }
+
+        .success-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .success-chart {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        .chart-circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(var(--gold) 0% 97%, var(--light-gray) 97% 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: var(--shadow);
+        }
+
+        .chart-circle:before {
+            content: '';
+            position: absolute;
+            width: 70%;
+            height: 70%;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .chart-text {
+            position: absolute;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+        }
+
+        .success-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .success-content h3 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .success-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .success-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .success-stat {
+            text-align: center;
+            padding: 20px;
+            background: var(--light-gray);
+            border-radius: 10px;
+        }
+
+        .success-stat .number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--gold);
+            display: block;
+        }
+
+        .success-stat .label {
+            font-size: 1rem;
+            color: var(--primary-blue);
+        }
+
+        /* Resume Download Section */
+        .resume-download {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .resume-download .section-title h2 {
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .resume-download .section-title h2:after {
+            background: linear-gradient(to right, var(--white), var(--light-gold));
+        }
+
+        .resume-download .btn {
+            background: var(--gold);
+            color: var(--dark-blue);
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 70px 0 30px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+            text-align: left;
+        }
+
+        .footer-column h3 {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-column p {
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-column ul li a:hover {
+            opacity: 1;
+            color: var(--gold);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 20px;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background: var(--gold);
+            color: var(--dark-blue);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 36, 99, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--gold);
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background: var(--white);
+            transition: var(--transition);
+        }
+
+        /* GEM Expertise Section */
+        .gem-expertise {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--medium-gray) 100%);
+        }
+
+        .gem-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gem-visual {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .gem-icon {
+            font-size: 150px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .gem-details {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .gem-details h3 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .gem-details p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .gem-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .gem-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .gem-feature i {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+            .profile-text h1 {
+                font-size: 3rem;
+            }
+            
+            .profile-text h2 {
+                font-size: 1.6rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+
+            .nav-menu {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                gap: 0;
+                flex-direction: column;
+                background: rgba(10, 36, 99, 0.95);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                padding: 20px 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-item {
+                margin: 15px 0;
+            }
+
+            .profile-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .profile-text h2 {
+                font-size: 1.4rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .timeline:before {
+                left: 20px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                width: calc(100% - 70px);
+                margin-left: 70px;
+                padding-left: 30px;
+                text-align: left;
+            }
+            
+            .timeline-content:before {
+                left: -40px !important;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-content {
+                border-right: none;
+                border-left: 5px solid var(--gold);
+            }
+            
+            .timeline-item:nth-child(even) .timeline-content li {
+                padding-right: 0;
+                padding-left: 25px;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-content li:before {
+                right: auto;
+                left: 0;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-btn {
+                width: 250px;
+                justify-content: center;
+            }
+            
+            .stats-container {
+                gap: 20px;
+            }
+            
+            .stat-item {
+                min-width: 160px;
+                padding: 20px;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .gem-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-text h1 {
+                font-size: 2.2rem;
+            }
+            
+            .profile-text h2 {
+                font-size: 1.2rem;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .profile-img {
+                width: 180px;
+                height: 180px;
+            }
+            
+            section {
+                padding: 70px 0;
+            }
+            
+            .stat-item {
+                min-width: 140px;
+                padding: 15px;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .stat-text {
+                font-size: 1rem;
+            }
+
+            .chart-container {
+                width: 250px;
+                height: 250px;
+            }
+
+            .chart-text {
+                font-size: 2.5rem;
+            }
+
+            .gem-icon {
+                font-size: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Parvindar<span>Kumar</span></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#competencies" class="nav-link">Competencies</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919312513680" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header Section -->
+    <header id="home">
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-container">
+                    <div class="profile-img">
+                        <img src="/parvindar.png" alt="Parvindar Kumar">
+                    </div>
+                    <div class="profile-text">
+                        <h1>Parvindar Kumar</h1>
+                        <h2>Senior Tender Manager – Hyphen Cables Pvt. Ltd.</h2>
+                        <p class="tagline">Expert in Government Tender Management with 19+ Years of Experience</p>
+                        
+                        <div class="contact-buttons">
+                            <a href="https://wa.me/919312513680" class="contact-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="mailto:parvindarkumar2@gmail.com" class="contact-btn">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                            <a href="tel:+919312513680" class="contact-btn">
+                                <i class="fas fa-phone"></i>
+                                <span>Call Now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number">2000+</div>
+                        <div class="stat-text">Tenders Managed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">97%</div>
+                        <div class="stat-text">Success Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">19+</div>
+                        <div class="stat-text">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-text">Govt Departments</div>
+                    
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-text">Work All Govt Portal And Website 
+                      </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <p>Detail-oriented <span class="highlight">Tender Manager with over 19 years of experience</span> managing end-to-end tendering processes across diverse industries. Successfully managed <span class="highlight">1000+ tenders</span> with an impressive <span class="highlight">97% accuracy rate</span>.</p>
+                <p>Extensively worked on Government e-Marketplace (GEM) portal and handled tenders for almost all major government departments including <span class="highlight">Railways, Metro, Defense, PWD, and many more</span>. Skilled in analyzing tenders, preparing competitive bids, and ensuring compliance with all legal and commercial frameworks.</p>
+                <p>Proven expertise in government e-marketplace (GEM) bidding, and all tender Govt website and portal, vendor coordination, and contract finalization. Strong leadership, negotiation, and project management capabilities with a deep understanding of procurement laws and market trends.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Senior Tender Manager</h3>
+                        <h4>Hyphen Cables Pvt. Ltd. | Aug 2025 – Present</h4>
+                        <ul>
+                            <li>Managing end-to-end tendering processes for government and private sector projects</li>
+                            <li>Developing competitive bidding strategies and ensuring compliance with all requirements</li>
+                            <li>Coordinating with cross-functional teams for successful tender submissions</li>
+                            <li>Leading negotiations and contract finalization with clients</li>
+                            <li>Implementing best practices in tender management for improved efficiency</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Senior Tender Manager</h3>
+                        <h4>SERVOKON, Noida | 2016 – 2025</h4>
+                        <ul>
+                            <li>Managed end-to-end procurement processes on the Government e-Marketplace (GEM) platform</li>
+                            <li>Coordinated with vendors and internal teams to prepare, submit, and track GEM tender bids</li>
+                            <li>Maintained accurate records of tender submissions and contract awards</li>
+                            <li>Monitored GEM portal for new tender opportunities and compliance changes</li>
+                            <li>Led negotiations during post-tender clarifications and contract finalization</li>
+                            <li>Supervised junior tender engineers and coordinators</li>
+                            <li>Achieved a remarkable 97% success rate in tender submissions</li>
+                            <li>Implemented process improvements that reduced tender submission time by 25%</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Manager</h3>
+                        <h4>SERVOKON, Delhi | 2008 – 2016</h4>
+                        <ul>
+                            <li>Handled tender identification, analysis, and documentation</li>
+                            <li>Coordinated stakeholder inputs for bid completion</li>
+                            <li>Managed purchasing activities including vendor selection and negotiation</li>
+                            <li>Oversaw tender submission and follow-up processes</li>
+                            <li>Built and led high-performing tender teams</li>
+                            <li>Developed training programs for junior team members</li>
+                            <li>Streamlined documentation processes for improved efficiency</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Service Engineer</h3>
+                        <h4>SERVOKON | 2007 – 2008</h4>
+                        <ul>
+                            <li>Performed equipment installation, commissioning, and maintenance</li>
+                            <li>Conducted routine inspections and preventative maintenance</li>
+                            <li>Provided customer support and guidance on system usage</li>
+                            <li>Addressed technical issues and maintained service records</li>
+                            <li>Developed troubleshooting guides for common equipment problems</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Production Executive</h3>
+                        <h4>IMTC Pvt. Ltd. | 2006 – 2007</h4>
+                        <ul>
+                            <li>Developed and implemented production schedules</li>
+                            <li>Monitored production processes for smooth operation</li>
+                            <li>Ensured products met quality standards</li>
+                            <li>Collaborated with quality assurance team to maintain consistency</li>
+                            <li>Identified process improvements to increase production efficiency</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Apprentice (Electronics)</h3>
+                        <h4>Moser Baer India Ltd. | 2005 – 2006</h4>
+                        <ul>
+                            <li>Assembled and maintained machinery and production equipment</li>
+                            <li>Assisted in installing, repairing, and maintaining electrical systems</li>
+                            <li>Learned technical skills under senior engineers' guidance</li>
+                            <li>Participated in quality control and assurance processes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Competencies Section -->
+    <section class="competencies" id="competencies">
+        <div class="container">
+            <div class="section-title">
+                <h2>Core Competencies</h2>
+            </div>
+            <div class="competencies-grid">
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Tender Management</h3>
+                </div>
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>GEM and all Government Tendering</h3>
+                </div>
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Stakeholder Coordination</h3>
+                </div>
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Client Interaction & Negotiation</h3>
+                </div>
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Team Leadership & Training</h3>
+                </div>
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Purchasing & Vendor Management</h3>
+                </div>
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Documentation & Order Processing</h3>
+                </div>
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Production & Maintenance Supervision</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GEM Expertise Section -->
+    <section class="gem-expertise">
+        <div class="container">
+            <div class="section-title">
+                <h2>GEM Portal Expertise</h2>
+            </div>
+            <div class="gem-content">
+                <div class="gem-visual">
+                    <div class="gem-icon">
+                        <i class="fas fa-laptop-house"></i>
+                    </div>
+                    <h3>Government e-Marketplace</h3>
+                </div>
+                <div class="gem-details">
+                    <h3>Expertise in GEM Portal Operations</h3>
+                    <p>With extensive experience in the Government e-Marketplace (GEM) and all Govt portal, I have successfully managed hundreds of tenders through this platform, ensuring compliance with all government regulations and requirements.</p>
+                    <p>My expertise includes end-to-end management of GEM tender processes, from identification and submission to tracking and contract finalization.</p>
+                    
+                    <div class="gem-features">
+                        <div class="gem-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>End-to-End GEM And All Govt Tender Management</span>
+                        </div>
+                        <div class="gem-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Vendor Registration & Management</span>
+                        </div>
+                        <div class="gem-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Bid Submission & Tracking</span>
+                        </div>
+                        <div class="gem-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Compliance & Documentation</span>
+                        </div>
+                        <div class="gem-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Price Benchmarking & Analysis</span>
+                        </div>
+                        <div class="gem-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Contract Finalization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tender Success Section -->
+    <section class="tender-success">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tender Success Rate</h2>
+            </div>
+            <div class="success-container">
+                <div class="success-chart">
+                    <div class="chart-container">
+                        <div class="chart-circle"></div>
+                        <div class="chart-text">97%</div>
+                    </div>
+                    <h3 style="margin-top: 20px; color: var(--primary-blue);">Success Rate</h3>
+                </div>
+                <div class="success-content">
+                    <h3>Proven Track Record in Tender Management</h3>
+                    <p>With over 19 years of experience in tender management, I have successfully handled more than 1000 tenders across various government departments and private sectors.</p>
+                    <p>My expertise in the Government e-Marketplace (GEM) And all portal has enabled me to achieve a remarkable 97% success rate in tender submissions, ensuring maximum value for my organizations.</p>
+                    
+                    <div class="success-stats">
+                        <div class="success-stat">
+                            <span class="number">2000+</span>
+                            <span class="label">Tenders Managed</span>
+                        </div>
+                        <div class="success-stat">
+                            <span class="number">97%</span>
+                            <span class="label">Success Rate</span>
+                        </div>
+                        <div class="success-stat">
+                            <span class="number">50+</span>
+                            <span class="label">Govt Departments</span>
+                        </div>
+                        <div class="success-stat">
+                            <span class="number">19+</span>
+                            <span class="label">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government Departments Section -->
+    <section class="departments">
+        <div class="container">
+            <div class="section-title">
+                <h2>Government Departments Worked With</h2>
+            </div>
+            <div class="section-subtitle">
+                Successfully managed tenders for various government departments and public sector undertakings
+            </div>
+            <div class="departments-container">
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <h3>Indian Railways</h3>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-subway"></i>
+                    </div>
+                    <h3>Metro Rail Corporations</h3>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Defense Departments</h3>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Public Works Department</h3>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Power Departments</h3>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Water Resources</h3>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Municipal Corporations</h3>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>Health Departments</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>MS Office</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <h3>MS Excel</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-file-word"></i>
+                    </div>
+                    <h3>MS Word</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Networking (Hardware)</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analytical & Strategic Skills</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>Leadership & Collaboration</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Communication Skills</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3>Market Research</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education</h2>
+            </div>
+            <div class="education-cards">
+                <div class="education-card">
+                    <h3>B.A. (Bachelor of Arts)</h3>
+                    <h4>IGNOU, New Delhi</h4>
+                </div>
+                <div class="education-card">
+                    <h3>ITI (Electronics Mechanic)</h3>
+                    <h4>NCVT, Delhi</h4>
+                </div>
+                <div class="education-card">
+                    <h3>Intermediate</h3>
+                    <h4>NOIS, Delhi</h4>
+                </div>
+                <div class="education-card">
+                    <h3>Matriculation</h3>
+                    <h4>DAV Intercollege, Baghpat</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section class="languages">
+        <div class="container">
+            <div class="section-title">
+                <h2>Languages</h2>
+            </div>
+            <div class="languages-container">
+                <div class="language-item">
+                    <div class="language-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>English</h3>
+                </div>
+                <div class="language-item">
+                    <div class="language-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <h3>Hindi</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Download Section -->
+    <section class="resume-download" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Download My Resume</h2>
+            </div>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Get a detailed copy of my professional resume for your records</p>
+            <a href="https://drive.google.com/file/d/1OyHOVyxvzbiUd0DrNufcrOVWSRIrzKlW/view?usp=sharing" class="btn btn-gold">
+                <i class="fas fa-download"></i>
+                Download Resume
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Me</h3>
+                    <p>Senior Tender Manager with 19+ years of experience in managing end-to-end tendering processes across diverse industries.</p>
+                    <p>Successfully managed 1000+ tenders with 97% accuracy rate.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#competencies">Competencies</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> parvindarkumar2@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9312513680</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Baghpat, U.P., India</p>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://wa.me/919312513680" class="social-icon" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="mailto:parvindarkumar2@gmail.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p class="copyright">Copyright © 2025 Parvinder Kumar | Designed with ❤️ by Ajay Kumar</p>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced scroll animation for elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.timeline-content, .competency-card, .skill-item, .education-card, .department-card, .language-item, .stat-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animatedElements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(el);
+            });
+
+            // Add animation delay for stats
+            const statItems = document.querySelectorAll('.stat-item');
+            statItems.forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.2}s`;
+            });
+
+            // Navbar scroll effect
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Mobile menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }));
+        });
+    </script>
+</body>
+</html>
