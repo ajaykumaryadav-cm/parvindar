@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parvinder Kumar | Senior Tender Manager</title>
+    <title>Parvindar Kumar | Senior Tender Manager</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
             --primary-blue: #0a2463;
@@ -162,6 +163,70 @@
             height: 100%;
             background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgzMCkiPjxyZWN0IHdpZHRoPSIyIiBoZWlnaHQ9IjQiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+');
             opacity: 0.1;
+        }
+
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 20%;
+            right: 15%;
+            animation-delay: 2s;
+            animation-duration: 20s;
+        }
+
+        .shape:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            bottom: 30%;
+            left: 15%;
+            animation-delay: 4s;
+            animation-duration: 18s;
+        }
+
+        .shape:nth-child(4) {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            right: 10%;
+            animation-delay: 6s;
+            animation-duration: 22s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
         }
 
         .header-content {
@@ -1039,6 +1104,323 @@
             font-size: 1.2rem;
         }
 
+        /* NEW: Interactive Charts Section */
+        .interactive-charts {
+            background: var(--white);
+        }
+
+        .charts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .chart-wrapper {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .chart-wrapper:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-dark);
+        }
+
+        .chart-title {
+            text-align: center;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        /* NEW: Case Studies Section */
+        .case-studies {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--medium-gray) 100%);
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .case-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .case-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-dark);
+        }
+
+        .case-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .case-content {
+            padding: 25px;
+        }
+
+        .case-content h3 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .case-content p {
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+        }
+
+        .case-stats {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid var(--medium-gray);
+            padding-top: 15px;
+        }
+
+        .case-stat {
+            text-align: center;
+        }
+
+        .case-stat .number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .case-stat .label {
+            font-size: 0.8rem;
+            color: var(--dark-gray);
+        }
+
+        /* NEW: Pricing Section */
+        .pricing {
+            background: var(--white);
+        }
+
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            transform: scale(1.05);
+            border: 3px solid var(--gold);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-dark);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .pricing-header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+
+        .pricing-period {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .pricing-features {
+            padding: 30px 20px;
+        }
+
+        .pricing-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .pricing-feature i {
+            color: var(--gold);
+        }
+
+        .pricing-footer {
+            padding: 0 20px 30px;
+            text-align: center;
+        }
+
+        /* NEW: Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--medium-gray) 100%);
+        }
+
+        .testimonial-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-slide {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            display: none;
+        }
+
+        .testimonial-slide.active {
+            display: block;
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .testimonial-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--dark-gray);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .testimonial-position {
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--medium-gray);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .testimonial-dot.active {
+            background: var(--gold);
+        }
+
+        /* NEW: Process Section */
+        .process {
+            background: var(--white);
+        }
+
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            counter-reset: step;
+        }
+
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+            text-align: center;
+            position: relative;
+        }
+
+        .process-step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 60px;
+            right: -30px;
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .process-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 40px;
+            position: relative;
+        }
+
+        .process-icon:before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+        }
+
+        .process-step h3 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            color: var(--dark-gray);
+        }
+
         /* Mobile Responsive */
         @media (max-width: 992px) {
             .profile-text h1 {
@@ -1055,6 +1437,10 @@
 
             .nav-menu {
                 gap: 20px;
+            }
+
+            .process-step:not(:last-child):after {
+                display: none;
             }
         }
 
@@ -1178,6 +1564,14 @@
             .gem-features {
                 grid-template-columns: 1fr;
             }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .pricing-card.featured:hover {
+                transform: translateY(-10px);
+            }
         }
 
         @media (max-width: 480px) {
@@ -1245,6 +1639,7 @@
                 <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
                 <li class="nav-item"><a href="#competencies" class="nav-link">Competencies</a></li>
                 <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#process" class="nav-link">Process</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -1262,6 +1657,12 @@
 
     <!-- Header Section -->
     <header id="home">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
         <div class="container">
             <div class="header-content">
                 <div class="profile-container">
@@ -1297,7 +1698,7 @@
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">97%</div>
-                        <div class="stat-text">Success Rate</div>
+                        <div class="stat-text">   Success Rate</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">19+</div>
@@ -1306,13 +1707,10 @@
                     <div class="stat-item">
                         <div class="stat-number">50+</div>
                         <div class="stat-text">Govt Departments</div>
-                    
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">50+</div>
-                        <div class="stat-text">Work All Govt Portal And Website 
-                      </div>
-                    
+                        <div class="stat-text">Work All Govt Portal And Website</div>
                     </div>
                 </div>
             </div>
@@ -1485,6 +1883,52 @@
         </div>
     </section>
 
+    <!-- NEW: Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tender Management Process</h2>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Tender Identification</h3>
+                    <p>Monitoring portals for relevant opportunities</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-analytics"></i>
+                    </div>
+                    <h3>Analysis & Evaluation</h3>
+                    <p>Assessing tender requirements and feasibility</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Documentation</h3>
+                    <p>Preparing comprehensive bid documents</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <h3>Submission</h3>
+                    <p>Ensuring timely and compliant submission</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Follow-up & Negotiation</h3>
+                    <p>Post-submission engagement and contract finalization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- GEM Expertise Section -->
     <section class="gem-expertise">
         <div class="container">
@@ -1534,6 +1978,29 @@
         </div>
     </section>
 
+    <!-- NEW: Interactive Charts Section -->
+    <section class="interactive-charts">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tender Performance Analytics</h2>
+            </div>
+            <div class="charts-container">
+                <div class="chart-wrapper">
+                    <div class="chart-title">Tender Success Rate by Department</div>
+                    <canvas id="departmentChart" width="400" height="300"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <div class="chart-title">Tender Volume by Year</div>
+                    <canvas id="volumeChart" width="400" height="300"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <div class="chart-title">Tender Value Distribution</div>
+                    <canvas id="valueChart" width="400" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Tender Success Section -->
     <section class="tender-success">
         <div class="container">
@@ -1569,6 +2036,74 @@
                         <div class="success-stat">
                             <span class="number">19+</span>
                             <span class="label">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Case Studies Section -->
+    <section class="case-studies">
+        <div class="container">
+            <div class="section-title">
+                <h2>Case Studies</h2>
+            </div>
+            <div class="case-grid">
+                <div class="case-card">
+                    <div class="case-image">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <div class="case-content">
+                        <h3>Indian Railways Tender</h3>
+                        <p>Successfully secured a major contract for electrical components with competitive pricing and timely delivery.</p>
+                        <div class="case-stats">
+                            <div class="case-stat">
+                                <div class="number">₹7Cr</div>
+                                <div class="label">Contract Value</div>
+                            </div>
+                            <div class="case-stat">
+                                <div class="number">97%</div>
+                                <div class="label">Success Score</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="case-content">
+                        <h3>Defense Department Project</h3>
+                        <p>Managed complex tender requirements for specialized equipment with stringent quality standards.</p>
+                        <div class="case-stats">
+                            <div class="case-stat">
+                                <div class="number">₹5Cr</div>
+                                <div class="label">Contract Value</div>
+                            </div>
+                            <div class="case-stat">
+                                <div class="number">98%</div>
+                                <div class="label">Success Score</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="case-content">
+                        <h3>Power Department Initiative</h3>
+                        <p>Streamlined the bidding process for electrical infrastructure projects, reducing submission time by 30%.</p>
+                        <div class="case-stats">
+                            <div class="case-stat">
+                                <div class="number">₹15Cr</div>
+                                <div class="label">Contract Value</div>
+                            </div>
+                            <div class="case-stat">
+                                <div class="number">96%</div>
+                                <div class="label">Success Score</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1638,6 +2173,43 @@
         </div>
     </section>
 
+    <!-- NEW: Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+            </div>
+            <div class="testimonial-container">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-text">
+                        "Parvindar's expertise in tender management has been instrumental in securing several major government contracts for our organization. His attention to detail and understanding of compliance requirements is exceptional."
+                    </div>
+                    <div class="testimonial-author">Rahul Bansal</div>
+                    <div class="testimonial-position">Director, Hyphen Cables Pvt. Ltd.</div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-text">
+                        "Working with Parvindar has transformed our tender submission process. His systematic approach and deep knowledge of GEM portal operations have significantly improved our success rate."
+                    </div>
+                    <div class="testimonial-author">Haji Kamruddin</div>
+                    <div class="testimonial-position">Managing Director, SERVOKON Systems</div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-text">
+                        "Parvindar's ability to navigate complex government tender requirements while maintaining competitive pricing is remarkable. He has consistently delivered outstanding results for our projects."
+                    </div>
+                    <div class="testimonial-author">Amit Verma</div>
+                    <div class="testimonial-position">Project Head,IMTC Pvt. Ltd.</div>
+                </div>
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active" data-slide="0"></div>
+                    <div class="testimonial-dot" data-slide="1"></div>
+                    <div class="testimonial-dot" data-slide="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Technical Skills Section -->
     <section class="skills" id="skills">
         <div class="container">
@@ -1692,6 +2264,113 @@
                         <i class="fas fa-search-dollar"></i>
                     </div>
                     <h3>Market Research</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Consulting Services</h2>
+            </div>
+            <div class="pricing-container">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="pricing-title">Basic Consultation</div>
+                        <div class="pricing-price">₹5,000</div>
+                        <div class="pricing-period">per tender</div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Tender Analysis & Evaluation</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Documentation Guidance</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Submission Support</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-times"></i>
+                            <span>Post-Submission Follow-up</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-times"></i>
+                            <span>Contract Negotiation</span>
+                        </div>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="https://wa.me/919312513680?text=Interested%20in%20Basic%20Consultation%20Package" class="btn btn-outline" target="_blank">Get Started</a>
+                    </div>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <div class="pricing-title">Comprehensive Package</div>
+                        <div class="pricing-price">₹10,000</div>
+                        <div class="pricing-period">per tender</div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>End-to-End Tender Management</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Documentation & Submission</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Post-Submission Follow-up</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Contract Negotiation</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Priority Support</span>
+                        </div>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="https://wa.me/919312513680?text=Interested%20in%20Comprehensive%20Package" class="btn" target="_blank">Get Started</a>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="pricing-title">Enterprise Solution</div>
+                        <div class="pricing-price">₹90,000</div>
+                        <div class="pricing-period">per month</div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Unlimited Tender Management</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Team Training & Mentoring</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Process Optimization</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Dedicated Account Manager</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>24/7 Priority Support</span>
+                        </div>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="https://wa.me/919312513680?text=Interested%20in%20Enterprise%20Solution" class="btn btn-outline" target="_blank">Contact Sales</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1768,7 +2447,7 @@
                 <div class="footer-column">
                     <h3>About Me</h3>
                     <p>Senior Tender Manager with 19+ years of experience in managing end-to-end tendering processes across diverse industries.</p>
-                    <p>Successfully managed 1000+ tenders with 97% accuracy rate.</p>
+                    <p>Successfully managed 2000+ tenders with 97% accuracy rate.</p>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
@@ -1778,6 +2457,7 @@
                         <li><a href="#experience">Experience</a></li>
                         <li><a href="#competencies">Competencies</a></li>
                         <li><a href="#skills">Skills</a></li>
+                        <li><a href="#process">Process</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1798,14 +2478,14 @@
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
-            <p class="copyright">Copyright © 2025 Parvinder Kumar | Designed with ❤️ by Ajay Kumar</p>
+            <p class="copyright">Copyright © 2025 Parvindar Kumar | Designed with ❤️ by Ajay Kumar</p>
         </div>
     </footer>
 
     <script>
         // Enhanced scroll animation for elements
         document.addEventListener('DOMContentLoaded', function() {
-            const animatedElements = document.querySelectorAll('.timeline-content, .competency-card, .skill-item, .education-card, .department-card, .language-item, .stat-item');
+            const animatedElements = document.querySelectorAll('.timeline-content, .competency-card, .skill-item, .education-card, .department-card, .language-item, .stat-item, .chart-wrapper, .case-card, .pricing-card, .process-step');
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -1853,11 +2533,135 @@
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
             }));
+
+            // Testimonial slider
+            const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+            const testimonialDots = document.querySelectorAll('.testimonial-dot');
+            
+            testimonialDots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const slideIndex = dot.getAttribute('data-slide');
+                    
+                    // Hide all slides
+                    testimonialSlides.forEach(slide => {
+                        slide.classList.remove('active');
+                    });
+                    
+                    // Remove active class from all dots
+                    testimonialDots.forEach(d => {
+                        d.classList.remove('active');
+                    });
+                    
+                    // Show selected slide and activate dot
+                    testimonialSlides[slideIndex].classList.add('active');
+                    dot.classList.add('active');
+                });
+            });
+
+            // Auto-rotate testimonials
+            let currentTestimonial = 0;
+            setInterval(() => {
+                testimonialSlides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                
+                testimonialDots.forEach(dot => {
+                    dot.classList.remove('active');
+                });
+                
+                currentTestimonial = (currentTestimonial + 1) % testimonialSlides.length;
+                
+                testimonialSlides[currentTestimonial].classList.add('active');
+                testimonialDots[currentTestimonial].classList.add('active');
+            }, 5000);
+
+            // Initialize Charts
+            const departmentCtx = document.getElementById('departmentChart').getContext('2d');
+            const departmentChart = new Chart(departmentCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Railways', 'Defense', 'Power', 'Metro', 'PWD', 'Municipal'],
+                    datasets: [{
+                        label: 'Success Rate (%)',
+                        data: [98, 96, 97, 95, 96, 94],
+                        backgroundColor: [
+                            'rgba(212, 175, 55, 0.7)',
+                            'rgba(10, 36, 99, 0.7)',
+                            'rgba(212, 175, 55, 0.7)',
+                            'rgba(10, 36, 99, 0.7)',
+                            'rgba(212, 175, 55, 0.7)',
+                            'rgba(10, 36, 99, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgb(212, 175, 55)',
+                            'rgb(10, 36, 99)',
+                            'rgb(212, 175, 55)',
+                            'rgb(10, 36, 99)',
+                            'rgb(212, 175, 55)',
+                            'rgb(10, 36, 99)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100
+                        }
+                    }
+                }
+            });
+
+            const volumeCtx = document.getElementById('volumeChart').getContext('2d');
+            const volumeChart = new Chart(volumeCtx, {
+                type: 'line',
+                data: {
+                    labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                    datasets: [{
+                        label: 'Tenders Managed',
+                        data: [180, 220, 240, 280, 320, 350, 390],
+                        borderColor: 'rgb(212, 175, 55)',
+                        backgroundColor: 'rgba(212, 175, 55, 0.1)',
+                        tension: 0.3,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true
+                }
+            });
+
+            const valueCtx = document.getElementById('valueChart').getContext('2d');
+            const valueChart = new Chart(valueCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Under ₹10L', '₹10L-₹50L', '₹50L-₹1Cr', '₹1Cr-₹5Cr', 'Above ₹5Cr'],
+                    datasets: [{
+                        data: [25, 35, 20, 15, 5],
+                        backgroundColor: [
+                            'rgba(10, 36, 99, 0.7)',
+                            'rgba(30, 70, 150, 0.7)',
+                            'rgba(212, 175, 55, 0.7)',
+                            'rgba(180, 150, 40, 0.7)',
+                            'rgba(150, 120, 30, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgb(10, 36, 99)',
+                            'rgb(30, 70, 150)',
+                            'rgb(212, 175, 55)',
+                            'rgb(180, 150, 40)',
+                            'rgb(150, 120, 30)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true
+                }
+            });
         });
     </script>
 </body>
-
 </html>
-
-
-
